@@ -1,0 +1,28 @@
+{
+  "name": "lvg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve": "npx nodemon server.js",
+    "bundle": "browserify public/helpers/main.js > public/bundle.js",
+    "sass": "sass --watch public/styles/main.scss public/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.1",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0",
+    "memorystore": "^1.6.6",
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.0"
+  }
+}

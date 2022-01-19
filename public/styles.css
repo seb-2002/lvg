@@ -1,0 +1,12 @@
+.content-box {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+}
+
+.box {
+  border: 1px solid black;
+  position: absolute;
+}
+
+/*# sourceMappingURL=styles.css.map */
