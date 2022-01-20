@@ -45,7 +45,6 @@ const assignStyles = (className, posArray1, posArray2) => {
   for (i = 1; i <= posArray1.length; i++) {
     let thisElm = $(`.${className}_${i}`);
     if (thisElm) {
-      console.log(thisElm);
     thisElm.css({"top": `${posArray1[i - 1]}%`, "left": `${posArray2[i - 1]}%`});
    
     }

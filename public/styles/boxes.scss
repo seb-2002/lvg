@@ -7,4 +7,12 @@
 .box {
   border: 1px solid black;
   position: absolute;
+  display: flex;
+  flex-direction : column;
+  background-color: gray;
+  opacity: .8;
+}
+
+.hidden {
+  display: none;
 }
