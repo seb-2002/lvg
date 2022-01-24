@@ -1,6 +1,6 @@
 const db = {
   sofia: {
-    src: "/static/src/sofia_nonstop.mp4"
+    src: "/static/src/sofia_nonstop.mp4",
   },
   scores: {
     title: "Scores & performances",
@@ -9,8 +9,18 @@ const db = {
       "colonel van gele",
       "ozabw",
       "devils island",
-      "rue des archives"
-    ]
+      "rue des archives",
+    ],
+  },
+  scores_2: {
+    title: "Scores & performances_2",
+    collection: [
+      "resting for sura",
+      "colonel van gele",
+      "ozabw",
+      "devils island",
+      "rue des archives",
+    ],
   },
   box_3: "3",
   box_4: "4",

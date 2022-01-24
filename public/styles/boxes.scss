@@ -8,11 +8,15 @@
   border: 1px solid black;
   position: absolute;
   display: flex;
-  flex-direction : column;
+  flex-direction: column;
   background-color: gray;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .hidden {
   display: none;
+}
+
+.focused {
+  background-color: yellow;
 }

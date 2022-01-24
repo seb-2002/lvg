@@ -45,8 +45,10 @@ const assignStyles = (className, posArray1, posArray2) => {
   for (i = 1; i <= posArray1.length; i++) {
     let thisElm = $(`.${className}_${i}`);
     if (thisElm) {
-    thisElm.css({"top": `${posArray1[i - 1]}%`, "left": `${posArray2[i - 1]}%`});
-   
+      thisElm.css({
+        top: `${posArray1[i - 1]}%`,
+        left: `${posArray2[i - 1]}%`,
+      });
     }
   }
   return;
@@ -64,6 +66,29 @@ const generateObjectPositions = (className, rangeOfPxls, minDifPixls) => {
   return;
 };
 
+function incrementZ(id) {
+  let z = $(`#${id}`);
+  let thisZ = parseInt(z.html());
+
+  let nextZ = thisZ + 1;
+  z.html(nextZ);
+
+  return thisZ;
+}
+
+const assignBoxClick = (className) => {
+  $(`.${className}`).on("click", function () {
+    console.log("Click");
+    if ($(this).hasClass("unfocused")) {
+      $(this).addClass("focused").removeClass("unfocused");
+      if ($(this).siblings().hasClass("focused")) {
+        $(this).siblings().addClass("unfocused").removeClass("focused");
+      }
+    }
+  });
+};
+
 module.exports = {
   generateObjectPositions,
+  assignBoxClick,
 };

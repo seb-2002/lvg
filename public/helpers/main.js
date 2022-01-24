@@ -1,11 +1,13 @@
-const {generateObjectPositions} = require('./scatterBoxes.js');
-const {handleLists} = require('./handleLists.js');
+const {
+  generateObjectPositions,
+  assignBoxClick,
+} = require("./scatterBoxes.js");
+const { handleLists } = require("./handleLists.js");
 
+$(document).ready(function () {
+  assignBoxClick("box");
 
-$(document).ready(function(){
+  handleLists("listsParent", "closed", "list");
 
-handleLists("listsParent", "closed", "list");
-
-generateObjectPositions("box", 75, 5)
-
+  generateObjectPositions("box", 75, 5);
 });

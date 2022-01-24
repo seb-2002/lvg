@@ -21,4 +21,8 @@
   display: none;
 }
 
+.focused {
+  background-color: yellow;
+}
+
 /*# sourceMappingURL=styles.css.map */

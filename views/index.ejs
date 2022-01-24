@@ -17,44 +17,44 @@
   <div class="content-box">
 
     <h2 class="hidden" id="z-index">1</h2>
-    
+
     <% let index = 1 %>
     <% for (let item in db) { %>
- 
-      <div class="box box_<%=index  %> ">
-<% if (item === "sofia") { %>
 
-    <video muted=true autoplay=true loop=true width="250">
+    <div class="box unfocused box_<%=index  %> ">
+      <% if (item === "sofia") { %>
 
-      <source src="<%=db[item].src%>" type="video/mp4">
-    </video>
+      <video muted=true autoplay=true loop=true width="250">
 
-   
-
-<% } else if (item === "scores") { %>
-  <% let scores = db[item] %> 
- <h2 class="menu-text list" >
-<%= scores.title %> 
- </h2>
-
- <% for (let entry of scores.collection)  { %> 
-  <p class="listItem hidden">
-  <%= entry %>   
-  </p>
+        <source src="<%=db[item].src%>" type="video/mp4">
+      </video>
 
 
- <% } %> 
+
+      <% } else if (item === "scores" || item === "scores_2") { %>
+      <% let scores = db[item] %>
+      <h2 class="menu-text list">
+        <%= scores.title %>
+      </h2>
+
+      <% for (let entry of scores.collection)  { %>
+      <p class="listItem hidden">
+        <%= entry %>
+      </p>
+
+
+      <% } %>
 
 
       <% } else { %>
-  
+
 
 
       <h2 class="menu-text">
         <%= db[item] %>
       </h2>
-      
-      <% } %> 
+
+      <% } %>
 
 
     </div>
