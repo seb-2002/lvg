@@ -1,5 +1,15 @@
 * {
   box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
 }
 
 .content-box {
@@ -9,12 +19,15 @@
 }
 
 .box {
-  border: 1px solid black;
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: linen;
+}
+
+.unfocused {
   opacity: 0.8;
+  box-shadow: 1.5px 1.5px darkgrey;
 }
 
 .hidden {
@@ -22,7 +35,14 @@
 }
 
 .focused {
+  opacity: 1;
+  box-shadow: 5px 5px blueviolet;
+  border: 2px dashed black;
   background-color: yellow;
+}
+
+h2 {
+  margin: 0.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

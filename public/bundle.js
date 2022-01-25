@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   handleLists("listsParent", "closed", "list");
 
-  generateObjectPositions("box", 75, 5);
+  generateObjectPositions("box", 85, 0);
 });
 
 },{"./handleLists.js":1,"./scatterBoxes.js":3}],3:[function(require,module,exports){
@@ -123,9 +123,13 @@ function incrementZ(id) {
 
 const assignBoxClick = (className) => {
   $(`.${className}`).on("click", function () {
-    console.log("Click");
     if ($(this).hasClass("unfocused")) {
-      $(this).addClass("focused").removeClass("unfocused");
+      let thisZ = incrementZ("z-index") + 4;
+
+      $(this)
+        .addClass("focused")
+        .removeClass("unfocused")
+        .css("z-index", thisZ);
       if ($(this).siblings().hasClass("focused")) {
         $(this).siblings().addClass("unfocused").removeClass("focused");
       }

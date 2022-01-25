@@ -31,7 +31,7 @@
 
 
 
-      <% } else if (item === "scores" || item === "scores_2") { %>
+      <% } else if (item === "scores" || item === "songs" || item === "teaching" || item === "writing") { %>
       <% let scores = db[item] %>
       <h2 class="menu-text list">
         <%= scores.title %>
@@ -46,7 +46,7 @@
       <% } %>
 
 
-      <% } else { %>
+      <% } else if (item !== "contact" && item !== "calendar") { %>
 
 
 
@@ -65,8 +65,15 @@
 
 
     <% } %>
-
   </div>
+  <div class="fixed menu">
+  <div class="contact-box">
+    <h2><%= db.contact %>  </h2> 
+  </div>
+  <div class="calendar-box">
+    <h2><%= db.calendar %>  </h2> 
+  </div>
+</div>
 
 
 

@@ -1,5 +1,16 @@
 * {
   box-sizing: border-box;
+  font-weight: normal;
 }
 
-@import 'boxes';
+body {
+  background-color: blanchedalmond;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+@import "boxes";
+@import "typography";

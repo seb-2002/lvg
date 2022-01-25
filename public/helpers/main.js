@@ -9,5 +9,5 @@ $(document).ready(function () {
 
   handleLists("listsParent", "closed", "list");
 
-  generateObjectPositions("box", 75, 5);
+  generateObjectPositions("box", 85, 0);
 });
