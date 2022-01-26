@@ -22,16 +22,15 @@
     <% for (let item in db) { %>
 
     <div class="box unfocused box_<%=index  %> ">
-      <% if (item === "sofia") { %>
-
-      <video muted=true autoplay=true loop=true width="250">
+     <% if (db[item].type === "video") { %>
+           <video muted=true autoplay=true loop=true width="250">
 
         <source src="<%=db[item].src%>" type="video/mp4">
       </video>
 
-
-
-      <% } else if (item === "scores" || item === "songs" || item === "teaching" || item === "writing") { %>
+    <% } else if (db[item].type === "collection") { %>   
+      
+              
       <% let scores = db[item] %>
       <h2 class="menu-text list">
         <%= scores.title %>
@@ -46,16 +45,21 @@
       <% } %>
 
 
-      <% } else if (item !== "contact" && item !== "calendar") { %>
+    <% } else if (db[item].type === "box") { %>   
+ 
 
 
-
-      <h2 class="menu-text">
-        <%= db[item] %>
+      <h2 class="menu-text list">
+        <%= db[item].title %>
       </h2>
+      <p class="hidden listItem">
+        <%= db[item].caption %> 
+      </p>
 
+     
       <% } %>
 
+     
 
     </div>
 

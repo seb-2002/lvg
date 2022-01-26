@@ -5,9 +5,9 @@ const {
 const { handleLists } = require("./handleLists.js");
 
 $(document).ready(function () {
-  assignBoxClick("box");
 
   handleLists("listsParent", "closed", "list");
+  assignBoxClick("box");
 
   generateObjectPositions("box", 85, 0);
 });

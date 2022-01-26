@@ -11,9 +11,9 @@ function addClickListener(parentClass) {
     if ($(this).hasClass("closed")) {
       $(this).addClass("open").removeClass("closed");
       $(this).children().removeClass("hidden");
-    } else if ($(this).hasClass("open")) {
-      $(this).addClass("closed").removeClass("open");
-      $(this).children(".listItem").addClass("hidden");
+    } else if ($(this).hasClass("open") && $(this).hasClass("focused")){
+          $(this).addClass("closed").removeClass("open");
+          $(this).children(".listItem").addClass("hidden");
     }
   });
 }
@@ -35,9 +35,9 @@ const {
 const { handleLists } = require("./handleLists.js");
 
 $(document).ready(function () {
-  assignBoxClick("box");
 
   handleLists("listsParent", "closed", "list");
+  assignBoxClick("box");
 
   generateObjectPositions("box", 85, 0);
 });
