@@ -5,6 +5,13 @@ function assignParentClass(parentClass1, parentClass2, childClass) {
   listsParent.addClass(parentClass2);
 }
 
+function assignParentGroup() {
+  $(".group-1").parent().addClass('parent_group-1');
+  $(".group-2").parent().addClass('parent_group-2');
+  $(".group-3").parent().addClass('parent_group-3');
+}
+
+
 function addClickListener(parentClass) {
   $(`.${parentClass}`).on("click", function () {
     if ($(this).hasClass("closed")) {
@@ -20,6 +27,7 @@ function addClickListener(parentClass) {
 function handleLists(parentClass1, parentClass2, childClass) {
   assignParentClass(parentClass1, parentClass2, childClass);
   addClickListener(parentClass1);
+  assignParentGroup();
 }
 
 module.exports = {

@@ -11,9 +11,32 @@
   background-color: linen;
 }
 
+.parent_group-{
+  &1{
+
+    box-shadow: 2px 2px $colPurple;
+    &.focused{
+      box-shadow: 5px 5px $colPurple;
+    }
+  }
+  &2{
+
+    box-shadow: 2px 2px $colGreen;
+    &.focused{
+      box-shadow: 5px 5px $colGreen;
+    }
+  }
+  &3{
+
+    box-shadow: 2px 2px $colTeal;
+    &.focused{
+      box-shadow: 5px 5px $colTeal;
+    }
+  }
+}
+
 .unfocused {
   opacity: 0.8;
-  box-shadow: 1.5px 1.5px darkgrey;
   
 }
 
@@ -23,7 +46,21 @@
 
 .focused {
   opacity: 1;
-  box-shadow: 5px 5px blueviolet;
-  border: 2px dashed black;
-  background-color: yellow;
+ 
+  
+ 
+}
+
+div.open{
+  h2.menu-text {
+    margin-bottom: 0;
+  }
+  p.caption{
+    margin-top: 0;
+    
+  }
+
+  img.box-image {
+    margin-bottom: -.25rem;
+  }
 }

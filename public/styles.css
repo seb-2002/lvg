@@ -25,9 +25,27 @@ body {
   background-color: linen;
 }
 
+.parent_group-1 {
+  box-shadow: 2px 2px #8A2BE2;
+}
+.parent_group-1.focused {
+  box-shadow: 5px 5px #8A2BE2;
+}
+.parent_group-2 {
+  box-shadow: 2px 2px #698F3F;
+}
+.parent_group-2.focused {
+  box-shadow: 5px 5px #698F3F;
+}
+.parent_group-3 {
+  box-shadow: 2px 2px #06BCC1;
+}
+.parent_group-3.focused {
+  box-shadow: 5px 5px #06BCC1;
+}
+
 .unfocused {
   opacity: 0.8;
-  box-shadow: 1.5px 1.5px darkgrey;
 }
 
 .hidden {
@@ -36,13 +54,41 @@ body {
 
 .focused {
   opacity: 1;
-  box-shadow: 5px 5px blueviolet;
-  border: 2px dashed black;
-  background-color: yellow;
+}
+
+div.open h2.menu-text {
+  margin-bottom: 0;
+}
+div.open p.caption {
+  margin-top: 0;
+}
+div.open img.box-image {
+  margin-bottom: -0.25rem;
 }
 
 h2 {
   margin: 0.25rem;
+}
+
+div.open p.caption {
+  font-size: 0.75rem;
+}
+
+h2, p {
+  color: #0A122A;
+}
+
+.contact-box {
+  display: flex;
+}
+.contact-box .email {
+  display: none;
+}
+.contact-box:hover h2, .contact-box.open h2 {
+  font-size: 5rem;
+}
+.contact-box:hover h2.email, .contact-box.open h2.email {
+  display: contents;
 }
 
 /*# sourceMappingURL=styles.css.map */

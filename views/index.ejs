@@ -49,14 +49,20 @@
  
 
 
-      <h2 class="menu-text list">
+      <h2 class="menu-text list <%= db[item].group %> ">
         <%= db[item].title %>
       </h2>
-      <p class="hidden listItem">
+      <div class="hidden listItem">
+      <p class="caption">
         <%= db[item].caption %> 
       </p>
+      <% if (db[item].src) { %> 
 
-     
+        <img class="box-image" src="<%= db[item].src %> ">
+
+        <% } %> 
+
+      </div>
       <% } %>
 
      
@@ -71,8 +77,9 @@
     <% } %>
   </div>
   <div class="fixed menu">
-  <div class="contact-box">
-    <h2><%= db.contact %>  </h2> 
+  <div class="contact-box closed">
+    <h2><%= db.contact.title %>  </h2> 
+    <h2 class="email"> - <%= db.contact.email %>  </h2> 
   </div>
   <div class="calendar-box">
     <h2><%= db.calendar %>  </h2> 

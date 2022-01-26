@@ -6,6 +6,13 @@ function assignParentClass(parentClass1, parentClass2, childClass) {
   listsParent.addClass(parentClass2);
 }
 
+function assignParentGroup() {
+  $(".group-1").parent().addClass('parent_group-1');
+  $(".group-2").parent().addClass('parent_group-2');
+  $(".group-3").parent().addClass('parent_group-3');
+}
+
+
 function addClickListener(parentClass) {
   $(`.${parentClass}`).on("click", function () {
     if ($(this).hasClass("closed")) {
@@ -21,6 +28,7 @@ function addClickListener(parentClass) {
 function handleLists(parentClass1, parentClass2, childClass) {
   assignParentClass(parentClass1, parentClass2, childClass);
   addClickListener(parentClass1);
+  assignParentGroup();
 }
 
 module.exports = {
@@ -33,16 +41,34 @@ const {
   assignBoxClick,
 } = require("./scatterBoxes.js");
 const { handleLists } = require("./handleLists.js");
+const {assignHandleContact} = require('./menu.js');
 
 $(document).ready(function () {
 
   handleLists("listsParent", "closed", "list");
   assignBoxClick("box");
-
   generateObjectPositions("box", 85, 0);
+  assignHandleContact('contact-box', 'open');
 });
 
-},{"./handleLists.js":1,"./scatterBoxes.js":3}],3:[function(require,module,exports){
+},{"./handleLists.js":1,"./menu.js":3,"./scatterBoxes.js":4}],3:[function(require,module,exports){
+
+function assignHandleContact(className, newClass) {
+  $(`.${className}`).on('click', () => {
+    if($(`.${className}`).hasClass('closed')) {
+      $(`.${className}`).addClass(newClass).removeClass("closed");
+    } else if ($(`.${className}`).hasClass(newClass)) {
+      $(`.${className}`).addClass("closed").removeClass(newClass);
+
+    }
+  });
+ 
+}
+
+module.exports = {
+  assignHandleContact
+}
+},{}],4:[function(require,module,exports){
 const countHTMLObjectsByClass = (className) => {
   let HTMLObjects = $(`.${className}`).length;
   return HTMLObjects;

@@ -1,0 +1,15 @@
+.contact-box{
+  display: flex;
+  .email {
+    display: none;
+  }
+  &:hover, &.open{
+    
+    h2{
+     font-size: 5rem;
+     &.email{
+       display: contents;
+     }
+    }
+  }
+}
