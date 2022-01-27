@@ -11,4 +11,5 @@ $(document).ready(function () {
   assignBoxClick("box");
   generateObjectPositions("box", 85, 0);
   assignHandleContact('contact-box', 'open');
+  assignHandleContact('calendar-box', 'open');
 });

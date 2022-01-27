@@ -78,6 +78,33 @@ h2, p {
   color: #0A122A;
 }
 
+.calendar-content-box {
+  position: fixed;
+  /* margin: 0 auto; */
+  top: 10vh;
+  left: 0;
+  /* border: 1px solid black; */
+  width: 50vw;
+  height: 50vh;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: linen;
+  opacity: 0.9;
+  z-index: 400;
+}
+
+.calendar-box.closed {
+  display: inline;
+}
+.calendar-box.closed .calendar-content-box {
+  display: none;
+}
+
+.calendar-title {
+  display: inline;
+}
+
 .contact-box {
   display: flex;
 }
@@ -89,6 +116,11 @@ h2, p {
 }
 .contact-box:hover h2.email, .contact-box.open h2.email {
   display: contents;
+}
+
+.menu {
+  z-index: 100;
+  left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,32 @@
+.calendar-content-box {
+    position: fixed;
+    /* margin: 0 auto; */
+    top: 10vh;
+    left: 0;
+    /* border: 1px solid black; */
+    width: 50vw;
+    height: 50vh;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: linen;
+    opacity: .9;
+    
+  z-index: 400;
+
+}
+
+.calendar-box.closed {
+  display: inline;
+  .calendar-content-box {
+    display: none;
+  }
+}
+
+.calendar-title {
+  display: inline;
+}
+
 .contact-box{
   display: flex;
   .email {
@@ -13,3 +42,10 @@
     }
   }
 }
+
+.menu {
+
+  z-index: 100;
+  left: 0;
+}
+

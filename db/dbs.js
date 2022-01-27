@@ -112,7 +112,10 @@ const db = {
       "1.sofia sample",
     ],
   },
-  calendar: "calendar",
+  calendar: {
+    title: "calendar",
+    dates: [1, 2, 3, 4]
+  },
   contact: {
    title: "contact",
    email: "info@vanlot.nl"

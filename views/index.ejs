@@ -14,6 +14,22 @@
 
 <body>
 
+  <div class="fixed menu">
+    <div class="contact-box closed">
+      <h2><%= db.contact.title %>  </h2> 
+      <h2 class="email"> - <%= db.contact.email %>  </h2> 
+    </div>
+    <div class="calendar-box closed">
+      <h2 class="calendar-title"><%= db.calendar.title %>  </h2>
+      <div class="calendar-content-box">
+        <ul>
+          <% for( let date in db.calendar.dates) { %>
+            <li> <%= date %> </li> 
+            <% } %>
+          </ul>
+        </div> 
+      </div>
+</div>
   <div class="content-box">
 
     <h2 class="hidden" id="z-index">1</h2>
@@ -76,15 +92,7 @@
 
     <% } %>
   </div>
-  <div class="fixed menu">
-  <div class="contact-box closed">
-    <h2><%= db.contact.title %>  </h2> 
-    <h2 class="email"> - <%= db.contact.email %>  </h2> 
-  </div>
-  <div class="calendar-box">
-    <h2><%= db.calendar %>  </h2> 
-  </div>
-</div>
+
 
 
 
