@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   position: relative;
+  top: 5vh;
 }
 
 .box {
@@ -23,6 +24,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: linen;
+}
+.box.open {
+  top: -35vh;
 }
 
 .parent_group-1 {
@@ -52,10 +56,20 @@ body {
   display: none;
 }
 
-.focused {
+div.open {
+  opacity: 0.5;
+  transition: 0.25s ease;
+}
+div.open .closebox {
+  position: absolute;
+  top: 1px;
+  right: 0px;
+  outline: 1px solid black;
+  padding: 0 5px;
+}
+div.open:hover {
   opacity: 1;
 }
-
 div.open h2.menu-text {
   margin-bottom: 0;
 }
@@ -64,6 +78,9 @@ div.open p.caption {
 }
 div.open img.box-image {
   margin-bottom: -0.25rem;
+  max-width: 500px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 h2 {
@@ -72,10 +89,22 @@ h2 {
 
 div.open p.caption {
   font-size: 0.75rem;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
-h2, p {
+h2,
+p {
   color: #0A122A;
+}
+
+.box-text {
+  max-width: 500px;
+  font-size: 0.75rem;
+  margin-right: 4px;
+}
+.box-text.description {
+  font-size: 1rem;
 }
 
 .calendar-content-box {
@@ -121,6 +150,16 @@ h2, p {
 .menu {
   z-index: 100;
   left: 0;
+}
+
+.bio {
+  z-index: 100;
+  position: absolute;
+  top: 50vh;
+  left: 10vw;
+  width: 12rem;
+  /* border: 1px solid black; */
+  min-height: 2.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

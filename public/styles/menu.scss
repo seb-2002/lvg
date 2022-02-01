@@ -1,19 +1,18 @@
 .calendar-content-box {
-    position: fixed;
-    /* margin: 0 auto; */
-    top: 10vh;
-    left: 0;
-    /* border: 1px solid black; */
-    width: 50vw;
-    height: 50vh;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: linen;
-    opacity: .9;
-    
-  z-index: 400;
+  position: fixed;
+  /* margin: 0 auto; */
+  top: 10vh;
+  left: 0;
+  /* border: 1px solid black; */
+  width: 50vw;
+  height: 50vh;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: linen;
+  opacity: 0.9;
 
+  z-index: 400;
 }
 
 .calendar-box.closed {
@@ -27,25 +26,33 @@
   display: inline;
 }
 
-.contact-box{
+.contact-box {
   display: flex;
   .email {
     display: none;
   }
-  &:hover, &.open{
-    
-    h2{
-     font-size: 5rem;
-     &.email{
-       display: contents;
-     }
+  &:hover,
+  &.open {
+    h2 {
+      font-size: 5rem;
+      &.email {
+        display: contents;
+      }
     }
   }
 }
 
 .menu {
-
   z-index: 100;
   left: 0;
 }
 
+.bio {
+  z-index: 100;
+  position: absolute;
+  top: 50vh;
+  left: 10vw;
+  width: 12rem;
+  /* border: 1px solid black; */
+  min-height: 2.5rem;
+}

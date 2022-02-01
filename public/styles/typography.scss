@@ -1,17 +1,27 @@
 h2 {
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
-div.open{
+div.open {
   h2.menu-text {
-  
   }
-  p.caption{
-   font-size: .75rem;
-    
+  p.caption {
+    font-size: 0.75rem;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 }
 
-h2, p {
+h2,
+p {
   color: $colNavy;
+}
+
+.box-text {
+  max-width: 500px;
+  font-size: 0.75rem;
+  margin-right: 4px;
+  &.description {
+    font-size: 1rem;
+  }
 }
