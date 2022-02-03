@@ -3,16 +3,16 @@
 
 
      <% if (db[item].type === "video") { %>
-     <div class="box unfocused box_<%=index  %> ">
+     <div class="box clickable unfocused box_<%=index  %> ">
        <%- include ('../partials/_video.ejs', {src: db[item].src}) %>
 
        <% } else if (db[item].type === "collection") { %>
-       <div class="box unfocused box_<%=index  %> collection ">
+       <div class="box clickable unfocused box_<%=index  %> collection ">
          <%- include ('../partials/_collection.ejs', {scores: db[item]})  %>
 
 
          <% } else if (db[item].type === "box") { %>
-         <div class="box unfocused box_<%=index  %> ">
+         <div class="box clickable unfocused box_<%=index  %> ">
            <%- include ('../partials/_box.ejs', {box: db[item]})  %>
 
            <% } %>

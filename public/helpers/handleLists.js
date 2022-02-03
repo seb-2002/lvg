@@ -26,7 +26,7 @@ function assignParentGroup() {
 
 function addClickListenerCloseBox(h2Class, parentClass, siblingClass) {
   $(`.${h2Class}`).on("click", function () {
-    if ($(this).parent().hasClass("open")) {
+    if ($(this).parent().hasClass("open")&& $(this).parent().hasClass("focused")) {
       console.log("click!");
       $(this).parent(`.${parentClass}`).addClass("closed").removeClass("open");
       $(this).siblings(`.${siblingClass}`).addClass("hidden");

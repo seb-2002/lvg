@@ -27,7 +27,7 @@ function assignParentGroup() {
 
 function addClickListenerCloseBox(h2Class, parentClass, siblingClass) {
   $(`.${h2Class}`).on("click", function () {
-    if ($(this).parent().hasClass("open")) {
+    if ($(this).parent().hasClass("open")&& $(this).parent().hasClass("focused")) {
       console.log("click!");
       $(this).parent(`.${parentClass}`).addClass("closed").removeClass("open");
       $(this).siblings(`.${siblingClass}`).addClass("hidden");
@@ -65,7 +65,7 @@ const { assignHandleContact } = require("./menu.js");
 
 $(document).ready(function () {
   handleLists("listsParent", "closed", "list", "menu-text", "listItem");
-  assignBoxClick("box");
+  assignBoxClick("clickable");
   generateObjectPositions("box", 85, 2);
   assignHandleContact("contact-box", "open");
   assignHandleContact("calendar-box", "open");

@@ -7,7 +7,7 @@
 </div>
 
 <% for (let entry of scores.collection)  { %>
-<div class="listItem unfocused hidden collection-item">
+<div class="clickable listItem unfocused hidden collection-item">
   <%- include ('../partials/_box.ejs', {box: entry, collection: true})  %>
 </div>
 

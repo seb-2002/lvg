@@ -166,20 +166,22 @@ p {
   min-height: 2.5rem;
 }
 
-.box.collection {
+.box.collection.open {
   background-color: transparent;
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.box.collection.open {
+  pointer-events: none;
   opacity: 0.8;
 }
 
 .collection-title, .collection-item {
   background-color: linen;
   box-shadow: 2px 2px #DB5A42;
+}
+.collection-title.focused, .collection-item.focused {
+  box-shadow: 5px 5px #DB5A42;
 }
 
 .collection-item {
@@ -190,6 +192,10 @@ div.open.listsParent .collection-title {
   font-size: 2rem;
   box-shadow: 7px 7px #DB5A42;
   opacity: 1;
+}
+
+.clickable, .collection-title {
+  pointer-events: all;
 }
 
 /*# sourceMappingURL=styles.css.map */

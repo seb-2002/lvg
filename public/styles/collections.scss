@@ -1,17 +1,21 @@
-.box.collection{
+.box.collection.open{
    background-color: transparent;
    height: 50vh;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   &.open{
+  pointer-events: none;
      opacity: .8;
-   } 
+  
 }
 
 .collection-title, .collection-item {
   background-color: linen;
    box-shadow: 2px 2px $colRed;
+   &.focused {
+     
+     box-shadow: 5px 5px $colRed;
+   }
   }
   
   .collection-item {
@@ -24,4 +28,8 @@
       box-shadow: 7px 7px $colRed;
       opacity: 1;
   }
+}
+
+.clickable, .collection-title {
+  pointer-events: all;
 }
