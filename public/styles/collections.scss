@@ -1,12 +1,18 @@
-.box.collection.open{
+.box.collection{
+
+  // min-width: 400px;
+
+&.open{
    background-color: transparent;
    height: 50vh;
    display: flex;
    flex-direction: column;
+   align-items: flex-start;
    justify-content: space-between;
   pointer-events: none;
      opacity: .8;
   
+}
 }
 
 .collection-title, .collection-item {
@@ -32,4 +38,8 @@
 
 .clickable, .collection-title {
   pointer-events: all;
+}
+
+.clickable.listItem.collection-item.listsParent{
+  margin-top: 50px;
 }

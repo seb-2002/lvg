@@ -14,8 +14,16 @@
   <% if (box.src_landscape) { %>
   <div class="box-content__column">
     <img class="box-image" src="<%= box.src_landscape %> ">
-    <% } %>
     <div class="box-content__text">
+
+    <% } else  if (box.src_portrait) {%>
+  <div class="box-content__row">
+    <img class="box-image__portrait" src="<%= box.src_portrait %> ">
+    <div class="box-content__text__portrait">
+
+      <% } else { %>
+        <div class="box-content__text">
+        <% } %> 
 
       <% if (box.description) { %>
       <p class="description box-text">
@@ -23,6 +31,9 @@
       </p>
       <% } %>
 
+      <% if (box.href) { %> 
+        <a target="_blank" href="<%= box.href %> "><%= box.href %></a>
+        <% } %>  
 
       <% if (box.agenda) { %>
       <%  let agenda = box.agenda %>
@@ -49,7 +60,7 @@
       </p>
       <% } %>
     </div>
-    <% if (box.src_landscape) { %>
+    <% if (box.src_landscape || box.src_portrait) { %>
   </div>
 
   <% } %>

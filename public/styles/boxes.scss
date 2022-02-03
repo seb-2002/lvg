@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   background-color: linen;
+  margin: 1rem;
 
   &.open {
     top: -35vh;
@@ -77,5 +78,30 @@ div.open {
     max-width: 500px;
     margin-left: 4px;
     margin-right: 4px;
+    &__portrait {
+    display: block;
+
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    }
+  }
+}
+
+.box-content {
+
+  
+  &__row{
+    display: flex;
+  
+  }
+ 
+  
+  &__text {
+    min-width : 350px;
+    &__portrait {
+      min-width : 350px;
+      margin-left: 1rem;
+    }
   }
 }

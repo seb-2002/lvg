@@ -132,7 +132,11 @@ const db = {
       { title: "3",
       description:"here's a description"},
       { title: "I like flocks of birds",
-      description:"here's a description"},
+      keywords:"movement research, environment, water, feel, make",
+      description: "It was the summer of 2015 and I was invited by Dima Stefanova to bring Matters of Movement to the city of Sofia, for the occasion of her Summer School Know-How-Show-How. A week of trailing water-lines, observing movement of humans and other beings around the central water sources of the city ensued. All this turned into a performative exhibition, and a small publication. Notes on the process you can find by clicking on the link below",
+      href: " https://2015.knowhowshowhow.org/flocks.html ",
+      src_portrait: "static/src/flocks-lotte-van-gelder.jpg"
+      },
       { title: "1.sofia sample",
       description:"here's a description"}
     ],

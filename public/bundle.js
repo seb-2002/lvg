@@ -31,6 +31,14 @@ function addClickListenerCloseBox(h2Class, parentClass, siblingClass) {
       console.log("click!");
       $(this).parent(`.${parentClass}`).addClass("closed").removeClass("open");
       $(this).siblings(`.${siblingClass}`).addClass("hidden");
+
+    $(this).parent(`.${parentClass}`).children('.open').children(`.${siblingClass}`).addClass('hidden');
+    $(this).parent(`.${parentClass}`).children('.open').addClass('closed').removeClass('open');
+
+    
+    
+
+
     } else if ($(this).parent().hasClass("closed")) {
       $(this).parent(`.${parentClass}`).addClass("open").removeClass("closed");
       $(this).siblings(`.${siblingClass}`).removeClass("hidden");
