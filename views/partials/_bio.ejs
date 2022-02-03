@@ -1,0 +1,26 @@
+<div class="bio">
+  <div class="box unfocused box_bio ">
+    <h2 class="menu-text list  <%= db.bio.group %>">
+      <%= db.bio.title %>
+    </h2>
+    <div class="hidden listItem">
+      <div class="closebox">x</div>
+
+
+      <% if (db.bio.src) { %>
+      <img class="box-image" src="<%= db.bio.src %> ">
+      <% } %>
+
+      <% if (db.bio.text) { %>
+      <% for( let paragraph of db.bio.text) { %>
+      <p class="description box-text">
+        <%= paragraph %>
+      </p>
+
+      <% } %>
+      <% } %>
+
+    </div>
+
+  </div>
+</div>

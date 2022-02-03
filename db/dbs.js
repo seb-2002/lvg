@@ -49,7 +49,7 @@ const db = {
     type: "box",
     keywords:
       "memory of space, distortions, performance, research, affective crumbs, ritual, vibrant matter, spatial score",
-    src: "static/src/atelier-taymans-print-lotte-van-gelder.jpg",
+    src_landscape: "static/src/atelier-taymans-print-lotte-van-gelder.jpg",
     description:
       "Atelier Taymans is a dance where places that have been lost are introduced to the space we meet in, together. During the performance memories are called upon, woven into the present, moved through, and gently forgotten.",
     agenda: [
@@ -135,12 +135,10 @@ const db = {
     type: "collection",
     title: "Small resistances of care",
     collection: [
-      "zonnelied",
-      "1",
-      "2",
-      "3",
-      "I like flocks of birds",
-      "1.sofia sample",
+      {
+        title: "I like flocks of birds",
+        description: "here's a description",
+      },
     ],
   },
   calendar: {

@@ -1,12 +1,57 @@
+<h2 class="menu-text list <%= box.group %> ">
+  <%= box.title %>
+</h2>
+<div class="hidden listItem">
+  <div class="closebox">x</div>
+
+  <% if (box.caption || box.keywords) { %>
+  <p class="caption box-text">
+    <%= box.caption || box.keywords %>
+  </p>
+  <% } %>
 
 
+  <% if (box.src_landscape) { %>
+  <div class="box-content__column">
+    <img class="box-image" src="<%= box.src_landscape %> ">
+    <% } %>
+    <div class="box-content__text">
 
-
-      <h2 class="menu-text list">
-        <%= db[item].title %>
-      </h2>
-      <p class="hidden listItem">
-        <%= db[item].caption %> 
+      <% if (box.description) { %>
+      <p class="description box-text">
+        <%= box.description %>
       </p>
+      <% } %>
 
 
+      <% if (box.agenda) { %>
+      <%  let agenda = box.agenda %>
+      <% console.log(agenda) %>
+      <% for( let date of agenda) { %>
+      <p class="date box-text">
+        <span><%=date.title%></span>,
+        <span><%=date.host%></span>,
+        <span><%=date.date%></span>,
+
+        <% if (date.evt) { %>
+        <span><%=date.evnt%></span>,
+        <% } %>
+
+        <span><%=date.place%></span>
+      </p>
+      <% } %>
+      <% } %>
+
+
+      <% if (box.credits) { %>
+      <p class="credits box-text">
+        <%= box.credits %>
+      </p>
+      <% } %>
+    </div>
+    <% if (box.src_landscape) { %>
+  </div>
+
+  <% } %>
+
+</div>

@@ -1,166 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include ('partials/_header.ejs')  %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lotte van Gelder</title>
-  <script src="/jquery/jquery.js"></script>
-
-  <script src="/static/bundle.js"></script>
-  <link rel="stylesheet" href="/static/styles.css">
-</head>
 
 <body>
 
-  <div class="fixed menu">
-    <div class="contact-box closed">
-      <h2><%= db.contact.title %> </h2>
-      <h2 class="email"> - <%= db.contact.email %> </h2>
-    </div>
-    <div class="calendar-box closed">
-      <h2 class="calendar-title"><%= db.calendar.title %> </h2>
-      <div class="calendar-content-box">
-        <ul>
-          <% for( let date in db.calendar.dates) { %>
-          <li> <%= date %> </li>
-          <% } %>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="bio">
-    <div class="box unfocused box_bio ">
-      <h2 class="menu-text list  <%= db.bio.group %>">
-        <%= db.bio.title %>
-      </h2>
-      <div class="hidden listItem">
-        <div class="closebox">x</div>
+  <%- include ('partials/_menu.ejs')  %>
+  <%- include ('partials/_bio.ejs')  %>
 
 
-        <% if (db.bio.src) { %>
-        <img class="box-image" src="<%= db.bio.src %> ">
-        <% } %>
-
-        <% if (db.bio.text) { %>
-        <% for( let paragraph of db.bio.text) { %>
-        <p class="description box-text">
-          <%= paragraph %>
-        </p>
-
-        <% } %>
-        <% } %>
-
-      </div>
-
-    </div>
-  </div>
   <div class="content-box">
 
+    <!-- this works like a variable in the jquery to determine z-index of focused boxes -->
     <h2 class="hidden" id="z-index">1</h2>
 
-    <% let index = 1 %>
-    <% for (let item in db) { %>
+    <%- include ('partials/_boxIterator.ejs') %>
 
-    <div class="box unfocused box_<%=index  %> ">
-      <% if (db[item].type === "video") { %>
-      <video muted=true autoplay=true loop=true width="250">
-
-        <source src="<%=db[item].src%>" type="video/mp4">
-      </video>
-
-      <% } else if (db[item].type === "collection") { %>
-
-
-      <% let scores = db[item] %>
-      <h2 class="menu-text list">
-        <%= scores.title %>
-      </h2>
-
-      <% for (let entry of scores.collection)  { %>
-      <p class="listItem hidden">
-        <%= entry %>
-      </p>
-
-
-      <% } %>
-
-
-      <% } else if (db[item].type === "box") { %>
-
-
-
-      <h2 class="menu-text list <%= db[item].group %> ">
-        <%= db[item].title %>
-      </h2>
-      <div class="hidden listItem">
-        <div class="closebox">x</div>
-
-        <% if (db[item].caption || db[item].keywords) { %>
-        <p class="caption box-text">
-          <%= db[item].caption || db[item].keywords %>
-        </p>
-        <% } %>
-
-
-        <% if (db[item].src) { %>
-        <img class="box-image" src="<%= db[item].src %> ">
-        <% } %>
-
-        <% if (db[item].description) { %>
-        <p class="description box-text">
-          <%= db[item].description %>
-        </p>
-        <% } %>
-
-
-        <% if (db[item].agenda) { %>
-        <%  let agenda = db[item].agenda %>
-        <% console.log(agenda) %>
-        <% for( let date of agenda) { %>
-        <p class="date box-text">
-          <span><%=date.title%></span>,
-          <span><%=date.host%></span>,
-          <span><%=date.date%></span>,
-
-          <% if (date.evt) { %>
-          <span><%=date.evnt%></span>,
-          <% } %>
-
-          <span><%=date.place%></span>
-        </p>
-        <% } %>
-        <% } %>
-
-
-        <% if (db[item].credits) { %>
-        <p class="credits box-text">
-          <%= db[item].credits %>
-        </p>
-        <% } %>
-
-
-      </div>
-      <% } %>
-
-
-
-
-
-    </div>
-
-
-    <% index ++ %>
-
-
-
-    <% } %>
   </div>
-
-
-
 
 
 </body>

@@ -1,0 +1,21 @@
+     <% let index = 1 %>
+     <% for (let item in db) { %>
+
+     <div class="box unfocused box_<%=index  %> ">
+
+       <% if (db[item].type === "video") { %>
+       <%- include ('../partials/_video.ejs', {src: db[item].src}) %>
+
+       <% } else if (db[item].type === "collection") { %>
+       <%- include ('../partials/_collection.ejs', {scores: db[item]})  %>
+
+
+       <% } else if (db[item].type === "box") { %>
+       <%- include ('../partials/_box.ejs', {box: db[item]})  %>
+
+       <% } %>
+     </div>
+
+     <% index ++ %>
+
+     <% } %>

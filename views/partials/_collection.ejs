@@ -1,14 +1,11 @@
+<h2 class="menu-text list">
+  <%= scores.title %>
+</h2>
 
-        
-      <% let scores = db[item] %>
-      <h2 class="menu-text list">
-        <%= scores.title %>
-      </h2>
-
-      <% for (let entry of scores.collection)  { %>
-      <p class="listItem hidden">
-        <%= entry %>
-      </p>
+<% for (let entry of scores.collection)  { %>
+<div class="listItem hidden">
+  <%- include ('../partials/_box.ejs', {box: entry})  %>
+</div>
 
 
-      <% } %>
+<% } %>
