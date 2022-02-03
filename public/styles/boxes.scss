@@ -5,6 +5,11 @@
   top: 5vh;
 }
 
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .box {
   position: absolute;
   display: flex;
@@ -80,7 +85,7 @@ div.open {
     margin-right: 4px;
     &__portrait {
     display: block;
-
+      margin-left: .25rem;
     max-height: 400px;
     width: auto;
     height: auto;
@@ -101,7 +106,16 @@ div.open {
     min-width : 350px;
     &__portrait {
       min-width : 350px;
-      margin-left: 1rem;
+      margin-left: .25rem;
     }
+  }
+}
+
+.gallery_portrait{
+display: flex;
+  
+  &__img {
+    max-width: 250px;
+    
   }
 }

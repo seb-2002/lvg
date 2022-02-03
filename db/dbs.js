@@ -41,9 +41,25 @@ const db = {
   goodbye: {
     type: "box",
 
-    caption: "Here's a description",
+    keywords: "spatial score, site specific, performance, song, memory, tree, pink dots",
+    description: "It was the month that John Baldessari died, and as usual the streets of this European city were filled with trees that were cut off from their roots, slowly passing on the pavement. Besides this, once again my heart was broken by a lover, so with each step I felt I was sinking through the pavement. There were plenty of reasons to stage this moment, write a song, to sing and cry and sing together in unexpected harmony.",
     title: "goodbye to mr B",
+    subtitle: "it's not over till the tree choir sings",
     group: "group-2",
+    src_landscape: "static/src/score-mrB-lotte-van-gelder.jpeg",
+       agenda: [
+      {
+        host: "Académie de Beaux Arts de Bruxelles",
+        date: "January 2020",
+        place: "Brussels",
+      },
+    ],
+    credits: "Appearances //placing dots- Avril Herdies, Pierre-Louis Kerbart, Lotte van Gelder //tree choir- Anna Kuch, Castelie Yalombo, Laura Battistella, Lou SVDU,  Tomás de Souza",
+    gallery_portrait: [
+      "static/src/sketch_misterB-lotte-van-gelder .jpeg",
+      "static/src/tree-choir-mrB-lot.jpeg"
+    ]
+
   },
   atelier: {
     type: "box",

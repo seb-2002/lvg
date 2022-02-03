@@ -4,6 +4,10 @@
 <div class="hidden listItem">
   <div class="closebox">x</div>
 
+  <% if (box.subtitle) { %>
+   <p class="subtitle"><%= box.subtitle %> </p>
+  <% } %>
+
   <% if (box.caption || box.keywords) { %>
   <p class="caption box-text">
     <%= box.caption || box.keywords %>
@@ -15,6 +19,9 @@
   <div class="box-content__column">
     <img class="box-image" src="<%= box.src_landscape %> ">
     <div class="box-content__text">
+      
+
+       
 
     <% } else  if (box.src_portrait) {%>
   <div class="box-content__row">
@@ -40,11 +47,16 @@
       <% console.log(agenda) %>
       <% for( let date of agenda) { %>
       <p class="date box-text">
+
+        
+        <% if (date.title) { %>
         <span><%=date.title%></span>,
+        <% } %>
+
         <span><%=date.host%></span>,
         <span><%=date.date%></span>,
 
-        <% if (date.evt) { %>
+        <% if (date.evnt) { %>
         <span><%=date.evnt%></span>,
         <% } %>
 
@@ -64,5 +76,14 @@
   </div>
 
   <% } %>
+
+  <% if (box.gallery_portrait) { %>
+    <div class="gallery_portrait">
+      <% for( let img of box.gallery_portrait) { %>
+      <img class="gallery_portrait__img" src="<%= img %> ">
+      <% } %>
+    </div>
+    
+    <% } %> 
 
 </div>

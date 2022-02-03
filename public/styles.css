@@ -19,6 +19,11 @@ body {
   top: 5vh;
 }
 
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .box {
   position: absolute;
   display: flex;
@@ -89,6 +94,7 @@ div.open img.box-image {
 }
 div.open img.box-image__portrait {
   display: block;
+  margin-left: 0.25rem;
   max-height: 400px;
   width: auto;
   height: auto;
@@ -102,16 +108,27 @@ div.open img.box-image__portrait {
 }
 .box-content__text__portrait {
   min-width: 350px;
-  margin-left: 1rem;
+  margin-left: 0.25rem;
+}
+
+.gallery_portrait {
+  display: flex;
+}
+.gallery_portrait__img {
+  max-width: 250px;
 }
 
 h2 {
   margin: 0.25rem;
 }
 
+.subtitle {
+  margin-left: 0.25rem;
+}
+
 div.open p.caption {
   font-size: 0.75rem;
-  margin-left: 4px;
+  margin-left: 0.25rem;
   margin-right: 4px;
 }
 
@@ -123,7 +140,7 @@ p {
 .box-text {
   max-width: 500px;
   font-size: 0.75rem;
-  margin-right: 4px;
+  margin-left: 0.25rem;
 }
 .box-text.description {
   font-size: 1rem;

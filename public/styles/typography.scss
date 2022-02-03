@@ -2,12 +2,16 @@ h2 {
   margin: 0.25rem;
 }
 
+.subtitle {
+  margin-left: .25rem;
+}
+
 div.open {
   h2.menu-text {
   }
   p.caption {
     font-size: 0.75rem;
-    margin-left: 4px;
+    margin-left: .25rem;
     margin-right: 4px;
   }
 }
@@ -20,7 +24,7 @@ p {
 .box-text {
   max-width: 500px;
   font-size: 0.75rem;
-  margin-right: 4px;
+ margin-left: .25rem;
   &.description {
     font-size: 1rem;
   }
