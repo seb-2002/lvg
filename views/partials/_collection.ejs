@@ -1,10 +1,14 @@
-<h2 class="menu-text list">
+
+<h2 class="menu-text list collection-title">
   <%= scores.title %>
 </h2>
+<div class="hidden listItem">
+  <div class="closebox">x</div>
+</div>
 
 <% for (let entry of scores.collection)  { %>
-<div class="listItem hidden">
-  <%- include ('../partials/_box.ejs', {box: entry})  %>
+<div class="listItem unfocused hidden collection-item">
+  <%- include ('../partials/_box.ejs', {box: entry, collection: true})  %>
 </div>
 
 

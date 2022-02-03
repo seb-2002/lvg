@@ -51,6 +51,9 @@ body {
 .unfocused {
   opacity: 0.8;
 }
+.unfocused.collection-item {
+  opacity: 1;
+}
 
 .hidden {
   display: none;
@@ -61,6 +64,7 @@ div.open {
   transition: 0.25s ease;
 }
 div.open .closebox {
+  pointer-events: none;
   position: absolute;
   top: 1px;
   right: 0px;
@@ -160,6 +164,32 @@ p {
   width: 12rem;
   /* border: 1px solid black; */
   min-height: 2.5rem;
+}
+
+.box.collection {
+  background-color: transparent;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box.collection.open {
+  opacity: 0.8;
+}
+
+.collection-title, .collection-item {
+  background-color: linen;
+  box-shadow: 2px 2px #DB5A42;
+}
+
+.collection-item {
+  position: relative;
+}
+
+div.open.listsParent .collection-title {
+  font-size: 2rem;
+  box-shadow: 7px 7px #DB5A42;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

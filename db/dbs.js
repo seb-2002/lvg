@@ -123,18 +123,40 @@ const db = {
     title: "Songs for buried rivers",
     type: "collection",
     collection: [
-      "zonnelied",
-      "1",
-      "2",
-      "3",
-      "I like flocks of birds",
-      "1.sofia sample",
+      { title: "zonnelied",
+      description:"here's a description"},
+      { title: "1",
+      description:"here's a description"},
+      { title: "2",
+      description:"here's a description"},
+      { title: "3",
+      description:"here's a description"},
+      { title: "I like flocks of birds",
+      description:"here's a description"},
+      { title: "1.sofia sample",
+      description:"here's a description"}
     ],
   },
   teaching: {
     type: "collection",
     title: "Small resistances of care",
     collection: [
+      {
+        title: "I like flocks of birds",
+        description: "here's a description",
+      },
+      {
+        title: "I like flocks of birds",
+        description: "here's a description",
+      },
+      {
+        title: "I like flocks of birds",
+        description: "here's a description",
+      },
+      {
+        title: "I like flocks of birds",
+        description: "here's a description",
+      },
       {
         title: "I like flocks of birds",
         description: "here's a description",

@@ -6,7 +6,7 @@ const { handleLists } = require("./handleLists.js");
 const { assignHandleContact } = require("./menu.js");
 
 $(document).ready(function () {
-  handleLists("listsParent", "closed", "list");
+  handleLists("listsParent", "closed", "list", "menu-text", "listItem");
   assignBoxClick("box");
   generateObjectPositions("box", 85, 2);
   assignHandleContact("contact-box", "open");
