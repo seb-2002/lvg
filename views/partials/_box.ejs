@@ -5,7 +5,7 @@
   <div class="closebox">x</div>
 
   <% if (box.subtitle) { %>
-   <p class="subtitle"><%= box.subtitle %> </p>
+  <p class="subtitle"><%= box.subtitle %> </p>
   <% } %>
 
   <% if (box.caption || box.keywords) { %>
@@ -14,76 +14,81 @@
   </p>
   <% } %>
 
-
+  <% if (box.src_landscape || box.src_portrait__collection) { %>
   <% if (box.src_landscape) { %>
   <div class="box-content__column">
     <img class="box-image" src="<%= box.src_landscape %> ">
     <div class="box-content__text">
-      
 
-       
+      <% } else if (box.src_portrait__collection) { %>
+      <%- include ('../partials/_gallery.ejs', {collection: box.src_portrait__collection})  %>
 
-    <% } else  if (box.src_portrait) {%>
-  <div class="box-content__row">
-    <img class="box-image__portrait" src="<%= box.src_portrait %> ">
-    <div class="box-content__text__portrait">
 
-      <% } else { %>
-        <div class="box-content__text">
-        <% } %> 
-
-      <% if (box.description) { %>
-      <p class="description box-text">
-        <%= box.description %>
-      </p>
       <% } %>
 
-      <% if (box.href) { %> 
-        <a target="_blank" href="<%= box.href %> "><%= box.href %></a>
-        <% } %>  
 
-      <% if (box.agenda) { %>
-      <%  let agenda = box.agenda %>
-      <% console.log(agenda) %>
-      <% for( let date of agenda) { %>
-      <p class="date box-text">
 
-        
-        <% if (date.title) { %>
-        <span><%=date.title%></span>,
+
+
+      <% } else  if (box.src_portrait) {%>
+      <div class="box-content__row">
+        <img class="box-image__portrait" src="<%= box.src_portrait %> ">
+        <div class="box-content__text__portrait">
+
+          <% } else { %>
+          <div class="box-content__text">
+            <% } %>
+
+
+
+            <% if (box.description) { %>
+            <p class="description box-text">
+              <%= box.description %>
+            </p>
+            <% } %>
+
+            <% if (box.href) { %>
+            <a target="_blank" href="<%= box.href %> "><%= box.href %></a>
+            <% } %>
+
+            <% if (box.agenda) { %>
+            <%  let agenda = box.agenda %>
+            <% console.log(agenda) %>
+            <% for( let date of agenda) { %>
+            <p class="date box-text">
+
+
+              <% if (date.title) { %>
+              <span><%=date.title%></span>,
+              <% } %>
+
+              <span><%=date.host%></span>,
+              <span><%=date.date%></span>,
+
+              <% if (date.evnt) { %>
+              <span><%=date.evnt%></span>,
+              <% } %>
+
+              <span><%=date.place%></span>
+            </p>
+            <% } %>
+            <% } %>
+
+
+            <% if (box.credits) { %>
+            <p class="credits box-text">
+              <%= box.credits %>
+            </p>
+            <% } %>
+            <% if (box.footerImg_landscape) { %>
+            <img class="box-image" src="<%=box.footerImg_landscape%>">
+            <% } %>
+          </div>
+
+          <% if (box.src_landscape || box.src_portrait || box.src_portrait__collection) { %>
+        </div>
+
         <% } %>
 
-        <span><%=date.host%></span>,
-        <span><%=date.date%></span>,
 
-        <% if (date.evnt) { %>
-        <span><%=date.evnt%></span>,
-        <% } %>
-
-        <span><%=date.place%></span>
-      </p>
-      <% } %>
-      <% } %>
-
-
-      <% if (box.credits) { %>
-      <p class="credits box-text">
-        <%= box.credits %>
-      </p>
-      <% } %>
-    </div>
-    <% if (box.src_landscape || box.src_portrait) { %>
-  </div>
-
-  <% } %>
-
-  <% if (box.gallery_portrait) { %>
-    <div class="gallery_portrait">
-      <% for( let img of box.gallery_portrait) { %>
-      <img class="gallery_portrait__img" src="<%= img %> ">
-      <% } %>
-    </div>
-    
-    <% } %> 
-
-</div>
+      </div>

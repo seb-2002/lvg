@@ -41,25 +41,27 @@ const db = {
   goodbye: {
     type: "box",
 
-    keywords: "spatial score, site specific, performance, song, memory, tree, pink dots",
-    description: "It was the month that John Baldessari died, and as usual the streets of this European city were filled with trees that were cut off from their roots, slowly passing on the pavement. Besides this, once again my heart was broken by a lover, so with each step I felt I was sinking through the pavement. There were plenty of reasons to stage this moment, write a song, to sing and cry and sing together in unexpected harmony.",
+    keywords:
+      "spatial score, site specific, performance, song, memory, tree, pink dots",
+    description:
+      "It was the month that John Baldessari died, and as usual the streets of this European city were filled with trees that were cut off from their roots, slowly passing on the pavement. Besides this, once again my heart was broken by a lover, so with each step I felt I was sinking through the pavement. There were plenty of reasons to stage this moment, write a song, to sing and cry and sing together in unexpected harmony.",
     title: "goodbye to mr B",
     subtitle: "it's not over till the tree choir sings",
     group: "group-2",
-    src_landscape: "static/src/score-mrB-lotte-van-gelder.jpeg",
-       agenda: [
+    footerImg_landscape: "static/src/score-mrB-lotte-van-gelder.jpeg",
+    agenda: [
       {
         host: "Académie de Beaux Arts de Bruxelles",
         date: "January 2020",
         place: "Brussels",
       },
     ],
-    credits: "Appearances //placing dots- Avril Herdies, Pierre-Louis Kerbart, Lotte van Gelder //tree choir- Anna Kuch, Castelie Yalombo, Laura Battistella, Lou SVDU,  Tomás de Souza",
-    gallery_portrait: [
+    credits:
+      "Appearances //placing dots- Avril Herdies, Pierre-Louis Kerbart, Lotte van Gelder //tree choir- Anna Kuch, Castelie Yalombo, Laura Battistella, Lou SVDU,  Tomás de Souza",
+    src_portrait__collection: [
       "static/src/sketch_misterB-lotte-van-gelder .jpeg",
-      "static/src/tree-choir-mrB-lot.jpeg"
-    ]
-
+      "static/src/tree-choir-mrB-lot.jpeg",
+    ],
   },
   atelier: {
     type: "box",
@@ -139,22 +141,19 @@ const db = {
     title: "Songs for buried rivers",
     type: "collection",
     collection: [
-      { title: "zonnelied",
-      description:"here's a description"},
-      { title: "1",
-      description:"here's a description"},
-      { title: "2",
-      description:"here's a description"},
-      { title: "3",
-      description:"here's a description"},
-      { title: "I like flocks of birds",
-      keywords:"movement research, environment, water, feel, make",
-      description: "It was the summer of 2015 and I was invited by Dima Stefanova to bring Matters of Movement to the city of Sofia, for the occasion of her Summer School Know-How-Show-How. A week of trailing water-lines, observing movement of humans and other beings around the central water sources of the city ensued. All this turned into a performative exhibition, and a small publication. Notes on the process you can find by clicking on the link below",
-      href: " https://2015.knowhowshowhow.org/flocks.html ",
-      src_portrait: "static/src/flocks-lotte-van-gelder.jpg"
+      { title: "zonnelied", description: "here's a description" },
+      { title: "1", description: "here's a description" },
+      { title: "2", description: "here's a description" },
+      { title: "3", description: "here's a description" },
+      {
+        title: "I like flocks of birds",
+        keywords: "movement research, environment, water, feel, make",
+        description:
+          "It was the summer of 2015 and I was invited by Dima Stefanova to bring Matters of Movement to the city of Sofia, for the occasion of her Summer School Know-How-Show-How. A week of trailing water-lines, observing movement of humans and other beings around the central water sources of the city ensued. All this turned into a performative exhibition, and a small publication. Notes on the process you can find by clicking on the link below",
+        href: " https://2015.knowhowshowhow.org/flocks.html ",
+        src_portrait: "static/src/flocks-lotte-van-gelder.jpg",
       },
-      { title: "1.sofia sample",
-      description:"here's a description"}
+      { title: "1.sofia sample", description: "here's a description" },
     ],
   },
   teaching: {
