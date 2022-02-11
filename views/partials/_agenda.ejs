@@ -1,0 +1,22 @@
+<% if (box.agenda) { %>
+<%  let agenda = box.agenda %>
+
+<% for( let date of agenda) { %>
+<p class="date box-text">
+
+  <% for(let elm in date) { %>
+  <% let lastIndex = Object.keys(date).length -1 %>
+  <% if (elm === Object.keys(date)[lastIndex]) { %>
+  <span class="<%= elm %> ">
+    <%=date[elm]%>
+  </span>
+  <% } else { %>
+  <span class="<%= elm %> ">
+    <%=date[elm]%>,
+  </span>
+  <% } %>
+  <% } %>
+
+</p>
+<% } %>
+<% } %>

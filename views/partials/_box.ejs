@@ -47,33 +47,23 @@
             </p>
             <% } %>
 
+            <% if (box.poem) { %>
+            <p class="description box-text"></p>
+            <% for( let line of box.poem) { %>
+
+            <span>
+              <%= line %>
+            </span></br>
+            <% } %>
+            </p>
+            <% } %>
+
             <% if (box.href) { %>
             <a target="_blank" href="<%= box.href %> "><%= box.href %></a>
             <% } %>
 
-            <% if (box.agenda) { %>
-            <%  let agenda = box.agenda %>
-            <% console.log(agenda) %>
-            <% for( let date of agenda) { %>
-            <p class="date box-text">
-
-
-              <% if (date.title) { %>
-              <span><%=date.title%></span>,
-              <% } %>
-
-              <span><%=date.host%></span>,
-              <span><%=date.date%></span>,
-
-              <% if (date.evnt) { %>
-              <span><%=date.evnt%></span>,
-              <% } %>
-
-              <span><%=date.place%></span>
-            </p>
-            <% } %>
-            <% } %>
-
+            <!-- agenda here -->
+            <%- include ('../partials/_agenda.ejs', {box: box}) %>
 
             <% if (box.credits) { %>
             <p class="credits box-text">

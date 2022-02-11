@@ -6,9 +6,25 @@ const db = {
   resting: {
     type: "box",
 
-    caption: "Here's a description",
-    title: "resting for sura",
+    keywords:
+      "Spatial score, domestic space, clay, micro movement, narration, rest",
+    description:
+      "January 6, 2022 Kisses from the land of clay and stars - eastwards in the Low Countries - living in a shed this week that stands in the middle of a corn field surrounded by rows of trees - cooking and heating from a small wood stove - rain and light - and lots of birds. ",
+    poem: [
+      "Many nature spirits hide in the wells, and the lady of the house tells me of them.",
+      "We introduce dancing bodies, imaginary bodies, story telling bodies and resting bodies to this",
+      "Place of hospitality, warmth and hard work.",
+      "We remember Sura, who transitioned far too soon.",
+    ],
+    title: "Resting for Sura",
     group: "group-3",
+    credits: "With Francisca Rijken",
+    agenda: [
+      {
+        title: "site specific performance for A & I ",
+        place: "De Lutte, Helmhorst",
+      },
+    ],
   },
   colonel: {
     type: "box",
@@ -33,10 +49,26 @@ const db = {
   },
   archives: {
     type: "box",
-
-    caption: "Here's a description",
+    subtitle: "2013-2017",
     title: "rue des archives",
     group: "group-1",
+    keywords:
+      "choreography for a stairwell, for a corridor, a hello, a goodbye",
+    description:
+      "When we say goodbye to a space, and it becomes a place again. When we honour the human who lived so connected to this space, by caring for their objects before they are finally removed. This was my goodbye to Rue des Archives, and a goodbye to Florence.",
+    agenda: [
+      {
+        title: "Performance",
+        date: "2017",
+      },
+      {
+        title: "Limited edition print & publication",
+        date: "2017",
+      },
+    ],
+    credits:
+      "Appearances- The neighbour, Caro Tuut, Sebastian Kann, Lucie Pindat, Lotte van Gelder a.o.",
+    src_landscape: "static/src/archives-lotte-van-gelder.JPG",
   },
   goodbye: {
     type: "box",
