@@ -21,22 +21,27 @@ const db = {
     credits: "With Francisca Rijken",
     agenda: [
       {
-        title: "site specific performance for A & I ",
+        title: "site specific performance for A & I",
         place: "De Lutte, Helmhorst",
       },
     ],
   },
   colonel: {
     type: "box",
-
-    caption: "Here's a description",
     title: "colonel van gele",
     group: "group-1",
   },
   ozabw: {
     type: "box",
-
-    caption: "Here's a description",
+    subtitle: "2017",
+    keywords: "social score, spatial score, she lives, she moves",
+    description__collection: [
+      "Fragment 1. She lives in the middle of the Red Light District, ground floor and basement apartment, wooden beams, square room very wide and bulging with books. Against the wall, up until the ceiling, stacks on the floor, stacks around the desk, stacks on the sofa. The inner workings of her mind connected to the space that contains her daily life.",
+      "Moving a stack, shifting space, shifting the mind.",
+      "Fragment 12. On the last two days we brush the wooden floor and the space seems to pull back already from belonging. I create a drawing, a score for actions about sips of coffee, gitanes, dark red porcelain saucers that hold the cups of profound lapsang souchong tea. And lots of paper, and a wave of a fan.",
+      "Then I capture this portrait.",
+      "The house dissolves.",
+    ],
     title: "ozabw",
     group: "group-1",
   },

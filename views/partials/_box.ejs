@@ -47,6 +47,17 @@
             </p>
             <% } %>
 
+            <% if (box.description__collection) { %>
+            <% for (let paragraph of box.description__collection) { %>
+
+            <p class="description box-text">
+              <%= paragraph %>
+            </p>
+
+            <%  } %>
+
+            <% } %>
+
             <% if (box.poem) { %>
             <p class="description box-text"></p>
             <% for( let line of box.poem) { %>
